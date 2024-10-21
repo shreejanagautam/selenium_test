@@ -8,6 +8,7 @@ import os
 
 # Initialize the WebDriver
 driver = webdriver.Chrome()
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -77,14 +78,14 @@ try:
     select_button.click()
 
     # Confirm Selection
-    okbtn = WebDriverWait(driver, 10).until(
+    ok_btn = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, '//*[@id="ion-overlay-4"]/div[2]/div[3]/button[2]'))
     )
 
     # Scroll into view if necessary
-    driver.execute_script("arguments[0].scrollIntoView();", okbtn)
+    driver.execute_script("arguments[0].scrollIntoView();", ok_btn)
 
-    okbtn.click()
+    ok_btn.click()
 
     # Set start time (optimized)
     start_time_input = WebDriverWait(driver, 10).until(
