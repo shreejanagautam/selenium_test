@@ -1,0 +1,25 @@
+# Ignore environment variables file
+.env
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+/.idea
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Python bytecode
+*.pyc
+_pycache_/
+
+# Ignore Selenium WebDriver-related binaries (if locally stored)
+chromedriver
+geckodriver
+
+# Ignore file uploads (like images)
+files/
+
+# Ignore virtual environments (if you are using one)
+venv/
